@@ -208,8 +208,14 @@ function ProductCarousel({ product }) {
 export function Product({ product, useAlternateLayout }) {
   const { id, name, tagline } = product;
 
+  const articleClassname = `lg:mx-auto lg:max-w-7xl mb-20 ${
+    useAlternateLayout
+      ? "bg-violet-800/20 px-2 md:px-8 py-8 rounded-lg"
+      : "bg-blue-900/20 px-2 md:px-8 py-8 rounded-lg"
+  }`;
+
   return (
-    <article id={`product-${id}`} className="lg:mx-auto lg:max-w-7xl mb-20">
+    <article id={`product-${id}`} className={articleClassname}>
       <ProductFeaturedScreenshot
         product={product}
         useAlternateLayout={useAlternateLayout}

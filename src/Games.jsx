@@ -11,6 +11,7 @@ entertainment that combines storytelling, art, and technology.`;
 
 import SS00 from "./assets/ch-screenshot.png";
 import SS01 from "./assets/d10-screenshot.png";
+import SS02 from "./assets/mill-screenshot.png";
 
 const products = [
   {
@@ -166,6 +167,69 @@ const products = [
     link: {
       label: "Check it out on itch.io",
       href: "https://richardmarks.itch.io/witch-color-jam",
+    },
+  },
+  {
+    id: "e752a66c-e948-41eb-aaf2-db1c2b692fe1",
+    name: "Snakes & Apples",
+    description: [
+      `A classic snake-clone game developed in ActionScript 3, delivers a high-octane experience filled with rapid action and voiced sound effects. Players engage in the exhilarating challenge of collecting apples while skillfully avoiding the snake's own tail. A true test of agility amidst the game's fast-paced dynamics.`,
+      `What sets this game apart is its infusion of humorous voiced sound effects, which add a playful touch to the intense gameplay. With its blend of speed, strategy, and entertaining sound elements, "Snakes & Apples" remains a beloved choice for gaming enthusiasts seeking an adrenaline rush and a dash of amusement.`,
+    ],
+    videos: [
+      {
+        id: "5b3024d7-0ef1-4f97-a75e-00edaab21cd3",
+        videoUrl:
+          "https://www.youtube.com/embed/2vT0fouq--8?si=wc1y1pmI_qQZw-qG",
+      },
+    ],
+  },
+  {
+    id: "5ded2f1a-5cd3-4282-b8ef-48cdef3e7129",
+    name: "SAWD",
+    tagline:
+      "1st-place winning complete RPG rendered in ASCII characters made in under 24 hours.",
+    description: [
+      `
+      Welcome to 'SAWD,' the sensational ASCII RPG that defies limits! Crafted in a lightning-fast 24-hour blitz, this game packs a punch with an immersive Manual Name Entry Screen—think Final Fantasy nostalgia meets interactive ASCII magic! Choose from Multiple Character Classes and brace yourself for a whirlwind of adventure with our Random Character Generation System that ensures no two journeys are alike.
+`,
+      `
+Engage in heart-pounding One-on-One Encounters featuring items, skills, and the thrill of a probabilistic chance of escape and reward. The blend of Random and Scripted Battles keeps you on your toes as you navigate through a world brought to life in stunning ASCII art.
+`,
+      `
+Prepare for a gaming experience like no other, complete with Items, Equipment, Magic, Inns, Shops, and Scripted Story Events. Seamless Realtime Keyboard Navigation Controls make your journey effortless, while Custom Multi-State In-Game Menus and Savegame Support for up to 3 Simultaneous Games add convenience to your heroic quest.
+`,
+      `
+Dive into 'SAWD'—the game that redefines the boundaries of ASCII gaming, offering depth, innovation, and a world of excitement within its compact ASCII universe!
+      `,
+      `Yes, the description for this one was written by ChatGPT. It made me laugh so hard, that I chose to include it verbatim.`,
+    ],
+    screenshots: [],
+    videos: [
+      {
+        id: "e7bfa56e-4edd-4d36-862d-cafffa064139",
+        videoUrl:
+          "https://www.youtube.com/embed/vWgxrpbbhIg?si=vQJBvY2lEVz9n-CJ",
+      },
+    ],
+  },
+  {
+    id: "3f63598f-fe92-4172-9971-9c2606fe0f5d",
+    name: "Millionaire",
+    tagline: "The perfect escape during those installation wait times",
+    description: [
+      `This console-mode game, crafted in Ruby, puts your luck to the test. Dive into the thrill of virtual bets on dice rolls, aiming to amass a fortune of $1,000,000. Will you play it safe or take calculated risks to reach your millionaire dream? With its simplicity and addictive gameplay, "Millionaire" promises to turn those mundane waits into thrilling moments of gaming excitement!`,
+    ],
+    screenshots: [
+      {
+        id: "f2a16737-0156-4d64-88d8-75fce46ee1ab",
+        imageUrl: SS02,
+        imageAlt: "Millionaire Screenshot",
+      },
+    ],
+    link: {
+      label: "Check it out on GitHub",
+      href: "https://github.com/RichardMarks/millionaire",
     },
   },
 ];
