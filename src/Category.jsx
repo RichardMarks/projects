@@ -10,7 +10,7 @@ function CategoryHeader({ icon, iconAlt, name }) {
           alt={iconAlt}
         />
       </div>
-      <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-widest">
+      <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-right tracking-widest">
         {name}
       </h2>
     </header>
@@ -18,8 +18,30 @@ function CategoryHeader({ icon, iconAlt, name }) {
 }
 
 function CategoryDescription({ description }) {
-  return (
-    <p className="text-lg lg:text-xl text-justify leading-relaxed mb-10 drop-shadow-lg tracking-wide lg:tracking-wider">
+  return Array.isArray(description) ? (
+    <>
+      {description.map((text, index) => {
+        const key = `category-description-${index}`;
+        const isLast = index === description.length - 1;
+        return isLast ? (
+          <p
+            key={key}
+            className="text-lg lg:text-xl text-justify leading-relaxed drop-shadow-lg tracking-wide lg:tracking-wider"
+          >
+            {text}
+          </p>
+        ) : (
+          <p
+            key={key}
+            className="text-lg lg:text-xl text-justify leading-relaxed mb-10 drop-shadow-lg tracking-wide lg:tracking-wider"
+          >
+            {text}
+          </p>
+        );
+      })}
+    </>
+  ) : (
+    <p className="text-lg lg:text-xl text-justify leading-relaxed drop-shadow-lg tracking-wide lg:tracking-wider">
       {description}
     </p>
   );
@@ -29,7 +51,7 @@ export function Category({ id, icon, iconAlt, name, description }) {
   return (
     <section
       id={`category-${id || "FIXME"}`}
-      className="lg:mx-auto lg:max-w-7xl"
+      className="pt-[64px] lg:mx-auto lg:max-w-7xl mb-10"
     >
       <CategoryHeader icon={icon} iconAlt={iconAlt} name={name} />
       <CategoryDescription description={description} />

@@ -1,22 +1,15 @@
-import { Category } from "./Category";
-
-import GamesCategoryIcon from "./assets/games_cat_icon.png";
-
-const GAMES_DESC = `Video games are interactive digital experiences where players often take
-control of characters, engaging in various challenges or adventures
-within virtual worlds. They are quite diverse, offering everything from casual
-puzzles to intense action, and they're a popular form of
-entertainment that combines storytelling, art, and technology.`;
-
 export function Intro() {
   return (
     <>
-      <Category
-        icon={GamesCategoryIcon}
-        iconAlt="Game Controller Icon"
-        name="Games"
-        description={GAMES_DESC}
-      />
+      <div id="intro" />
+      <p className="pt-[64px] text-xl text-center md:text-left md:text-2xl leading-loose md:leading-relaxed mb-10 drop-shadow-lg tracking-wide lg:mx-auto lg:max-w-5xl">
+        Welcome to a curated compilation reflecting my portfolio of projects,
+        showcasing developments dating back to 1990. This collection offers a
+        glimpse into my creative endeavors, capturing a breadth of work that
+        spans across time and technologies. It is important to note that this
+        selection is not all-inclusive nor entirely representative of the
+        entirety of my creations.
+      </p>
     </>
   );
 }

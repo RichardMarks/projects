@@ -1,3 +1,5 @@
+import { Link } from "./Link";
+
 const menuItems = [
   {
     id: "6fdb78ab-7975-4980-8f94-76e240413ddd",
@@ -12,17 +14,17 @@ const menuItems = [
   {
     id: "ebfaed38-3319-4cfc-8066-f50744002082",
     label: "Games",
-    href: "#games",
+    href: "#category-games",
   },
   {
     id: "81a93346-8694-4ad9-acb4-c06d2bd46a23",
     label: "Tools",
-    href: "#tools",
+    href: "#category-tools",
   },
   {
     id: "f2b3b1dc-e96b-47f8-bd26-90ffe7499a72",
     label: "Game Engines",
-    href: "#engines",
+    href: "#category-engines",
   },
   {
     id: "b5c5da84-1577-4475-a713-eed996ce0cd9",
@@ -37,12 +39,18 @@ function MobileMenu() {
       {menuItems.map((menuItem) => {
         return (
           <li key={menuItem.id}>
-            <a
+            <Link
               className="text-2xl tracking-widest flex justify-center items-center min-h-[64px] text-semibold text-gray-200  text-center w-full py-2 rounded-sm bg-gray-500/10"
               href={menuItem.href}
+              onClick={() => {
+                const inputElement = document.querySelector("#mobile-menu");
+                if (inputElement) {
+                  inputElement.checked = !inputElement.checked;
+                }
+              }}
             >
               {menuItem.label}
-            </a>
+            </Link>
           </li>
         );
       })}
@@ -88,12 +96,12 @@ function DesktopMenu() {
       {menuItems.map((menuItem) => {
         return (
           <li key={menuItem.id}>
-            <a
+            <Link
               className="text-xl text-semibold text-gray-200 inline-block text-center hover:text-green-500"
               href={menuItem.href}
             >
               {menuItem.label}
-            </a>
+            </Link>
           </li>
         );
       })}

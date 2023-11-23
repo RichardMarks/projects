@@ -1,3 +1,5 @@
+import { Link } from "./Link";
+
 /* eslint-disable react/prop-types */
 const VIDEO_URL =
   "https://cdn.pixabay.com/vimeo/365890980/abstract-27726.mp4?width=640&hash=d45867f83b48e0a39f8102d2a97e668e658f6f6f";
@@ -24,12 +26,13 @@ function ExploreButton() {
           ↓
         </span>
       </div>
-      <a
-        href="#project1"
+      <Link
+        href="#category-games"
         className="text-gray-900 font-semibold mt-20 inline-block px-6 py-3 rounded-lg bg-green-500 hover:bg-green-600 hover:scale-105 ease-out duration-300"
       >
         Explore My Projects
-      </a>
+      </Link>
+
       <div className="rotate-90 inline-block pb-3">
         <span className="inline-block text-green-500 text-4xl animate-bounce">
           ↓
