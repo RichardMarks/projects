@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 
 import { Carousel } from "flowbite-react";
+import { useLightbox } from "./LightboxContext";
 
 function ProductFeaturedScreenshot({ product, useAlternateLayout }) {
+  const lightbox = useLightbox();
   // if there are no screenshots, nothing to render
   if (!product.screenshots) {
     return null;
@@ -15,7 +17,7 @@ function ProductFeaturedScreenshot({ product, useAlternateLayout }) {
     return null;
   }
 
-  const figureClass = `w-full my-4 md:mb-8 md:w-1/2 md:my-0 ${
+  const figureClass = `cursor-pointer w-full my-4 md:mb-8 md:w-1/2 md:my-0 ${
     useAlternateLayout
       ? "md:float-right md:ml-4 lg:ml-8"
       : "md:float-left md:mr-4 lg:mr-8"
@@ -25,10 +27,10 @@ function ProductFeaturedScreenshot({ product, useAlternateLayout }) {
 
   const imageClass = `${
     portrait ? "aspect-[9/16]" : "aspect-video"
-  } rounded-lg shadow-lg shadow-blue-900 p-0.5 bg-blue-800`;
+  } rounded-lg shadow-lg shadow-blue-900 p-0.5 bg-blue-800 `;
 
   return (
-    <figure className={figureClass}>
+    <figure className={figureClass} onClick={() => lightbox.show(imageUrl)}>
       <img
         src={imageUrl}
         data-lb="true"
@@ -52,7 +54,7 @@ function ProductDescription({ product }) {
       {description.map((text, index) => {
         const key = `product-description-${index}`;
         const isLast = index === description.length - 1;
-        const pClassName = `text-lg lg:text-xl text-justify leading-relaxed drop-shadow-lg tracking-wide lg:tracking-wider ${
+        const pClassName = `pointer-events-none text-lg lg:text-xl text-justify leading-relaxed drop-shadow-lg tracking-wide lg:tracking-wider ${
           isLast ? "" : "mb-10"
         }`;
         return (
@@ -98,6 +100,7 @@ function ProductVideos({ product }) {
   const { videos = [] } = product;
   return (
     <>
+      <div className="clear-both" />
       {videos.map((video) => {
         return (
           <div
@@ -120,6 +123,7 @@ function ProductVideos({ product }) {
 }
 
 function ProductScreenshots({ product }) {
+  const lightbox = useLightbox();
   const { screenshots = [] } = product;
   const screenshotsRemaining = screenshots.slice(1);
   if (!screenshotsRemaining.length) {
@@ -128,7 +132,7 @@ function ProductScreenshots({ product }) {
   return (
     <div className="grid grid-flow-col">
       {screenshotsRemaining.map((screenshot) => {
-        const figureClass = `w-full my-4 md:mb-8 md:w-1/2 md:my-0`;
+        const figureClass = `w-full my-4 md:mb-8 md:w-1/2 md:my-0 cursor-pointer`;
 
         const { imageUrl, imageAlt, portrait, id } = screenshot;
 
@@ -137,7 +141,11 @@ function ProductScreenshots({ product }) {
         } rounded-lg shadow-lg shadow-blue-900 p-0.5 bg-blue-800`;
 
         return (
-          <figure key={id} className={figureClass}>
+          <figure
+            key={id}
+            className={figureClass}
+            onClick={() => lightbox.show(imageUrl)}
+          >
             <img
               src={imageUrl}
               data-lb="true"
@@ -220,11 +228,11 @@ export function Product({ product, useAlternateLayout }) {
         product={product}
         useAlternateLayout={useAlternateLayout}
       />
-      <h4 className="text-3xl lg:text-4xl font-semibold mb-2 tracking-widest">
+      <h4 className="pointer-events-none text-3xl lg:text-4xl font-semibold mb-2 tracking-widest">
         {name}
       </h4>
       {tagline ? (
-        <p className="text-xl lg:text-2xl text-justify leading-relaxed drop-shadow-lg tracking-wide lg:tracking-wider mb-10">
+        <p className="pointer-events-none text-xl lg:text-2xl text-justify leading-relaxed drop-shadow-lg tracking-wide lg:tracking-wider mb-10">
           {tagline}
         </p>
       ) : null}

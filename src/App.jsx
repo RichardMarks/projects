@@ -6,10 +6,11 @@ import { Nav } from "./Nav";
 import { Outro } from "./Outro";
 import { Tools } from "./Tools";
 import { Games } from "./Games";
+import { LightboxProvider } from "./Lightbox";
 
 function App() {
   return (
-    <>
+    <LightboxProvider>
       <div id="home" />
       <Nav />
       <Hero />
@@ -21,7 +22,7 @@ function App() {
         <div className="min-h-[96px]" />
       </Content>
       <Outro />
-    </>
+    </LightboxProvider>
   );
 }
 
