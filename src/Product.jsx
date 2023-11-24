@@ -2,6 +2,9 @@
 
 import { Carousel } from "flowbite-react";
 import { useLightbox } from "./LightboxContext";
+import { Video } from "./Video";
+
+const USE_LAZY_VIDEOS = true;
 
 function ProductFeaturedScreenshot({ product, useAlternateLayout }) {
   const lightbox = useLightbox();
@@ -107,14 +110,7 @@ function ProductVideos({ product }) {
             key={video.id}
             className="w-full h-full mt-5 md:mx-auto md:max-w-[560px] md:max-h-[315px] lg:min-h-[315px]"
           >
-            <iframe
-              className="aspect-video"
-              width="100%"
-              src={video.videoUrl}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+            <Video url={video.videoUrl} lazy={USE_LAZY_VIDEOS} />
           </div>
         );
       })}
@@ -181,14 +177,7 @@ function ProductCarousel({ product }) {
               key={video.id}
               className="w-full h-full mt-5 md:mx-auto md:max-w-[560px] md:max-h-[315px] lg:min-h-[315px]"
             >
-              <iframe
-                className="aspect-video"
-                width="100%"
-                src={video.videoUrl}
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
+              <Video url={video.videoUrl} lazy={USE_LAZY_VIDEOS} />
             </div>
           );
         })}
