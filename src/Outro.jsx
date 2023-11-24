@@ -41,6 +41,16 @@ export function Outro() {
             My LinkedIn
           </a>
         </div>
+        <div className="mt-4 text-center">
+          <a
+            href="https://richardmarks.us/resume.pdf"
+            className="text-white"
+            target="_blank"
+            rel="noreferrer"
+          >
+            My Resumé
+          </a>
+        </div>
       </div>
     </footer>
   );

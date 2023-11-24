@@ -31,6 +31,11 @@ const menuItems = [
     label: "Outro",
     href: "#outro",
   },
+  {
+    id: "fa8bf3ac-3f78-457f-98c7-3890febba5d7",
+    label: "Resumé",
+    href: "https://richardmarks.us/resume.pdf",
+  },
 ];
 
 function MobileMenu() {
