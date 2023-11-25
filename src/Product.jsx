@@ -110,7 +110,11 @@ function ProductVideos({ product }) {
             key={video.id}
             className="w-full h-full mt-5 md:mx-auto md:max-w-[560px] md:max-h-[315px] lg:min-h-[315px]"
           >
-            <Video url={video.videoUrl} lazy={USE_LAZY_VIDEOS} />
+            <Video
+              url={video.videoUrl}
+              lazy={USE_LAZY_VIDEOS}
+              thumb={video.thumbUrl}
+            />
           </div>
         );
       })}

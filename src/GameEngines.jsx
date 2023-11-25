@@ -31,7 +31,7 @@ const products = [
       `Easy Console was a deliberately constrained retro game engine written in C using the Allegro 4.1 multimedia framework. It functioned as a self-contained Fantasy Computer executable, processing plain-text source code resembling a fusion of x86 CPU assembly language and Pascal syntax through a virtual machine emulator runtime.`,
       `A fantasy computer emulates the charm of 8-bit computers and old-school consoles within a game engine or virtual machine. It challenges developers to operate within limitations—such as color palettes, sound channels, resolution, and memory—popularizing its use in retro-gaming and game jam communities.`,
       `The "ECVME" operated with a single-threaded execution model, capable of supporting up to 32 individually-controlled 8x8 pixel sprite graphics on a 160x200 pixel display. Additionally, it supported C-string formatted text printing and played back ogg vorbis encoded audio files, managing a background music stream channel and two sound effect channels. The engine responded to four directional keys and two action keys.`,
-      `The included "shoot.prg" demo introduced the user to a small space shooter game playable on the console. Which you may watch a video of here.
+      `The included "shoot.prg" demo introduced the user to a small space shooter game playable on the console. You may watch a video here.
       Regrettably, the original source code met an unfortunate end during Hurricane Katrina in 2005 and was lost.`,
     ],
     carousel: true,
@@ -78,6 +78,7 @@ const products = [
         id: "830bd4f0-d9a6-4d40-84aa-479541b2d3e9",
         videoUrl:
           "https://www.youtube.com/embed/U3U9WEHh64o?si=tI5ZYypnrIEC87vu",
+        thumbUrl: "https://i.ytimg.com/vi/U3U9WEHh64o/hqdefault.jpg",
       },
     ],
   },

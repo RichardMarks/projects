@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { getVideoId } from "./getVideoId";
 
-export function Video({ url, lazy }) {
+export function Video({ url, lazy, thumb }) {
   const videoId = getVideoId(url);
   const [waiting, setWaiting] = useState("waiting");
 
@@ -13,7 +13,7 @@ export function Video({ url, lazy }) {
   const thumbnailMq = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
   const thumbnailHq = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
   const thumbnailSd = `https://img.youtube.com/vi/${videoId}/sddefault.jpg`;
-  const thumbnailHd = `http://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+  const thumbnailHd = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
   const srcset = `${thumbnailMq} 320w ${thumbnailHq} 480w ${thumbnailSd} 640w ${thumbnailHd} 1920w`;
 
@@ -24,12 +24,16 @@ export function Video({ url, lazy }) {
           onClick={() => setWaiting("ready")}
           className="relative bg-black after:content-[''] after:absolute after:left-1/2 after:top-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:bg-black/40 after:rounded-md after:h-[64px] after:w-[100px] before:drop-shadow-lg before:z-10 before:content-[''] before:border-solid before:border-t-[15px] before:border-r-0 before:border-b-[15px] before:border-l-[26px] before:border-l-white before:border-t-transparent before:border-b-transparent before:border-r-white before:absolute before:left-1/2 before:top-1/2 before:-translate-y-1/2 before:-translate-x-1/2 cursor-pointer"
         >
-          <img
-            srcSet={srcset}
-            src={thumbnailSd}
-            alt=""
-            className="w-full h-full aspect-video "
-          />
+          {thumb ? (
+            <img src={thumb} alt="" className="w-full h-full aspect-video " />
+          ) : (
+            <img
+              srcSet={srcset}
+              src={thumbnailSd}
+              alt=""
+              className="w-full h-full aspect-video "
+            />
+          )}
         </div>
       ) : (
         <iframe

@@ -51,7 +51,7 @@ const products = [
       Netflix. The game and all assets were made from scratch during the
       entire 12 days of production. Credit for most visuals goes to my wife
       Rachel. I was responsible for project management, implementing the game
-      mechanics, the asset pipeline, audio production, story editing and final
+      mechanics, the asset pipeline, audio production, story editing, and final
       packaging and distribution processes.`,
       `I composed, recorded, edited, and mastered all of the music of
       the game using Tracktion Waveform Pro, Apple Logic Pro, a MIDI
@@ -105,8 +105,8 @@ const products = [
       "The Evil Heart Federation is invading and you’re on the run in your bucket-o-bolts cargo ship.",
     description: [
       `Within an intense timeframe of under three days, I meticulously crafted a captivating space shooter. This game boasted upgrades, animations, dramatic death sequences, explosive effects, and adversaries represented as 'Evil Hearts.' Notably, it was designed with a compact 96x96 resolution, adhering to a limited color palette stipulated by the competition's rules.`,
-      `One of the significant innovations within this project was the development of my proprietary binary sprite format, conversion tools, and a rendering system. There are no external asset files in the game. Everything is packed into the binary. These custom tools and systems were instrumental in bringing the game to life within the constrained timeframe of approximately 60 hours. This endeavor stands as a testament to my creativity and technical prowess, serving as my entry for the inaugural FlashPunk Game Competition.`,
-      `Unfortunately, with the flash end of life declaration by Adobe, playing the game is not as simple as it had been when I published it. I made use of the Ruffle player to make the gameplay video. I may republish the game in the future.`,
+      `One of the significant innovations within this project was the development of my proprietary binary sprite format, conversion tools, and rendering system. There are no external asset files in the game. Everything is packed into the binary. These custom tools and systems were instrumental in bringing the game to life within the constrained timeframe of approximately 60 hours. This endeavor stands as a testament to my creativity and technical prowess, serving as my entry for the inaugural FlashPunk Game Competition.`,
+      `Unfortunately, with the flash end-of-life declaration by Adobe, playing the game is not as simple as it had been when I published it. I made use of the Ruffle player to make the gameplay video. I may republish the game in the future.`,
     ],
     screenshots: [
       {
@@ -128,7 +128,7 @@ const products = [
     name: "Witch Color",
     tagline: "Witch Color Should I Mix?",
     description: [
-      `For the second Pixel Weekend Jam on itch.io, this creation soared to a commendable fifth place among 31 competing entries. I was responsible for part of the game design, the programming, and audio, meticulously crafting each facet to ensure an engaging experience. My wife played a pivotal role, infusing the game with visual allure through her stunning artwork.`,
+      `For the second Pixel Weekend Jam on itch.io, this creation soared to a commendable fifth place among 31 competing entries. I was responsible for part of the game design, the programming, and the audio, meticulously crafting each facet to ensure an engaging experience. My wife played a pivotal role, infusing the game with visual allure through her stunning artwork.`,
       `The gameplay revolved around the captivating challenge of mixing vibrant potions to unlock a spectrum of new colors. This mechanic enticed players to explore various combinations, adding an element of discovery to the experience. Leveraging SDL and the C programming language, I brought this concept to life.`,
       `Building games in a short amount of time is really fun and challenging.`,
     ],
